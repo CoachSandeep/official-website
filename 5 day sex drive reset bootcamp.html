@@ -1,0 +1,1691 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>5 Day Male Drive Reset</title>
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #0d0908;
+      color: #f5f0eb;
+      line-height: 1.6;
+      overflow-x: hidden;
+      padding-bottom: 100px;
+    }
+
+    /* ── PREMIUM LAZY REVEAL ── */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(40px) scale(0.96);
+      filter: blur(6px);
+      transition:
+        opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+        filter 0.8s ease;
+      will-change: transform, opacity;
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      filter: blur(0);
+    }
+
+    /* ── SECTION SHARED ── */
+    section {
+      padding: 20px 24px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .container-lg {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .container-sm {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .label {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: #D32035;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 900;
+      margin-top: 12px;
+      line-height: 1.1;
+    }
+
+    /* ── HERO ── */
+    #hero {
+      min-height: 100vh;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+
+      background-image:
+        linear-gradient(to bottom,
+          rgba(0, 0, 0, 0.92) 0%,
+          rgba(0, 0, 0, 0.78) 35%,
+          rgba(0, 0, 0, 0.82) 65%,
+          rgba(0, 0, 0, 0.96) 100%),
+        url('https://tagmango.com/staticassets/-633c0bf6-4468-49cb-9fd8-acc4f3a11aae-6fd396003e0dba4af6ab028859f3ffe6.JPG');
+
+      background-size: 140%;
+      background-position: center top;
+      overflow: hidden;
+    }
+
+    .glow-orb {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+      filter: blur(120px);
+    }
+
+
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      max-width: 860px;
+      padding: 20px 15px;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: #D32035;
+      border: 1px solid rgba(217, 79, 30, 0.45);
+      padding: 8px 18px;
+      border-radius: 2px;
+      margin-bottom: 154px;
+    }
+
+    .hero-h1 {
+      font-size: clamp(2.8rem, 8vw, 5rem);
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.0;
+      margin-bottom: 16px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-h1::before {
+      content: "";
+      position: absolute;
+
+      width: 500px;
+      height: 220px;
+
+      top: 50%;
+      left: 50%;
+
+      transform: translate(-50%, -50%);
+
+      background: radial-gradient(circle,
+          rgba(211, 32, 53, 0.35) 0%,
+          rgba(211, 32, 53, 0.15) 40%,
+          rgba(211, 32, 53, 0.05) 65%,
+          transparent 100%);
+
+      filter: blur(60px);
+
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .hero-h1 span {
+      color: #D32035;
+    }
+
+    .hero-sub {
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+      color: rgba(255, 255, 255, 0.8);
+      font-weight: 600;
+      margin: 36px 0 36px;
+    }
+
+    .hero-sub span {
+      color: #D32035;
+    }
+
+    .hero-desc {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.5);
+      max-width: 600px;
+      margin: 0 auto 40px;
+    }
+
+    .hero-desc span {
+      color: #D32035;
+    }
+
+    .hero-tagline {
+      margin-top: 24px;
+      margin-bottom: 24px;
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.35);
+      font-style: italic;
+    }
+
+    .scroll-line {
+      position: absolute;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1px;
+      height: 48px;
+      background: linear-gradient(to bottom, transparent, #D32035);
+      opacity: 0.45;
+    }
+
+    /* ── CTA BUTTON ── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #D32035;
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 16px 22px;
+      border-radius: 2px;
+      transition: filter 0.2s, transform 0.1s;
+      box-shadow: 0 8px 32px rgba(217, 79, 30, 0.45);
+    }
+
+    .btn:hover {
+      filter: brightness(1.15);
+    }
+
+    .btn:active {
+      transform: scale(0.97);
+    }
+
+    /* ── PROBLEM ── */
+    #problem {
+      background: #0d0908;
+    }
+
+    .section-center {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 16px;
+    }
+
+    .pain-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: #151210;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 2px;
+      padding: 16px;
+    }
+
+    .pain-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #D32035;
+      margin-top: 8px;
+      flex-shrink: 0;
+    }
+
+    .pain-card p {
+      color: rgba(245, 240, 235, 0.8);
+    }
+
+    .callout {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 1.1rem;
+      color: #6b6360;
+    }
+
+    .callout strong {
+      color: #f5f0eb;
+    }
+
+    /* ── SOLUTION ── */
+    #solution {
+      background: #110e0b;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .glow-solution {
+      position: absolute;
+      bottom: -100px;
+      right: -100px;
+      width: 500px;
+      height: 500px;
+      background: rgba(217, 79, 30, 0.08);
+      filter: blur(150px);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    #solution .inner {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+
+    #solution .intro {
+      font-size: 1.1rem;
+      color: #6b6360;
+      margin: 16px 0 40px;
+    }
+
+    #solution .intro strong {
+      color: #f5f0eb;
+    }
+
+    .systems {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .sys-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #151210;
+      border: 1px solid rgba(217, 79, 30, 0.35);
+      border-radius: 2px;
+      padding: 12px 20px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.05em;
+      color: #f5f0eb;
+    }
+
+    /* ── HOW IT WORKS ── */
+    #how {
+      background: #0d0908;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
+    .section-header p {
+      color: #6b6360;
+      margin-top: 12px;
+    }
+
+    .days {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .day-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      background: #151210;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 2px;
+      padding: 24px;
+      transition: border-color 0.2s;
+    }
+
+    .day-card:hover {
+      border-color: rgba(217, 79, 30, 0.45);
+    }
+
+    .day-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+
+    .d1 {
+      background: linear-gradient(135deg, #c2410c, #b91c1c);
+    }
+
+    .d2 {
+      background: linear-gradient(135deg, #dc2626, #9f1239);
+    }
+
+    .d3 {
+      background: linear-gradient(135deg, #d97706, #c2410c);
+    }
+
+    .d4 {
+      background: linear-gradient(135deg, #ea580c, #d97706);
+    }
+
+    .d5 {
+      background: linear-gradient(135deg, #ca8a04, #ea580c);
+    }
+
+    .day-body {
+      flex: 1;
+    }
+
+    .day-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: #D32035;
+    }
+
+    .day-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-top: 4px;
+      color: #f5f0eb;
+      transition: color 0.2s;
+    }
+
+    .day-card:hover .day-title {
+      color: #D32035;
+    }
+
+    .day-desc {
+      color: #6b6360;
+      margin-top: 4px;
+      font-size: 0.95rem;
+    }
+
+    .day-num {
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: rgba(255, 255, 255, 0.06);
+      user-select: none;
+      align-self: center;
+    }
+
+    @media (max-width: 600px) {
+      .day-num {
+        display: none;
+      }
+    }
+
+    /* ── WHAT YOU GET ── */
+    #get {
+      background: #110e0b;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    @media (max-width: 768px) {
+      .two-col {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+
+    .checklist {
+      list-style: none;
+      margin-top: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .checklist li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: rgba(245, 240, 235, 0.9);
+    }
+
+    .check-icon {
+      color: #D32035;
+      font-weight: 900;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .img-wrap {
+      position: relative;
+      border-radius: 2px;
+      overflow: hidden;
+      aspect-ratio: 3/4;
+    }
+
+    .img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .img-fade {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, #0d0908 0%, transparent 60%);
+    }
+
+    .img-bonus {
+      position: absolute;
+      bottom: 16px;
+      left: 16px;
+      right: 16px;
+      background: rgba(21, 18, 16, 0.93);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(217, 79, 30, 0.35);
+      border-radius: 2px;
+      padding: 16px;
+    }
+
+    .img-bonus .b-label {
+      font-size: 12px;
+      font-weight: 700;
+      color: #D32035;
+    }
+
+    .img-bonus p {
+      font-size: 12px;
+      color: #6b6360;
+      margin-top: 4px;
+    }
+
+    /* ── RESULTS ── */
+    #results {
+      background: #0d0908;
+    }
+
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 16px;
+    }
+
+    .result-card {
+      background: #151210;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 2px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 12px;
+      transition: border-color 0.2s;
+    }
+
+    .result-card:hover {
+      border-color: rgba(217, 79, 30, 0.45);
+    }
+
+    .result-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 2px;
+      background: rgba(217, 79, 30, 0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+    }
+
+    .result-card p {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #f5f0eb;
+    }
+
+    /* ── NOT THIS ── */
+    #not {
+      background: linear-gradient(180deg, #131210 0%, #0d0908 100%);
+    }
+
+    #not .inner {
+      text-align: center;
+    }
+
+    #not ul {
+      list-style: none;
+      margin: 32px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    #not li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(21, 18, 16, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 2px;
+      padding: 16px 20px;
+      color: rgba(245, 240, 235, 0.65);
+    }
+
+    .x-icon {
+      color: #e05252;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .verdict {
+      color: #6b6360;
+      font-size: 1rem;
+      margin-top: 8px;
+    }
+
+    .verdict strong {
+      color: #f5f0eb;
+    }
+
+    /* ── FOR WHO ── */
+    #who {
+      background: #0d0908;
+    }
+
+    .who-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 16px;
+    }
+
+    .who-card {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: #151210;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 2px;
+      padding: 20px;
+      transition: border-color 0.2s;
+    }
+
+    .who-card:hover {
+      border-color: rgba(217, 79, 30, 0.45);
+    }
+
+    .who-icon {
+      color: #D32035;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .who-card p {
+      font-weight: 600;
+      color: #f5f0eb;
+    }
+
+    /* ── FINAL CTA ── */
+    #cta {
+      padding: 112px 24px;
+      position: relative;
+      overflow: hidden;
+      background-color: #0d0908;
+      background-image:
+        linear-gradient(to bottom, rgba(10, 5, 5, 0.92) 0%, rgba(10, 5, 5, 0.75) 50%, rgba(10, 5, 5, 0.97) 100%),
+        url('https://images.unsplash.com/photo-1578924608828-79a71150f711?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1080');
+      background-size: 120%;
+      background-position: center;
+    }
+
+    .glow-cta {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 700px;
+      height: 400px;
+      background: rgba(217, 79, 30, 0.18);
+      filter: blur(120px);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    #cta .inner {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+
+    #cta h2 {
+      font-size: clamp(2.2rem, 6vw, 3.8rem);
+      font-weight: 900;
+      color: #fff;
+      margin-top: 16px;
+      margin-bottom: 16px;
+      line-height: 1.1;
+    }
+
+    #cta h2 span {
+      color: #D32035;
+    }
+
+    .cta-body {
+      color: rgba(255, 255, 255, 0.55);
+      font-size: 1.1rem;
+      margin-bottom: 16px;
+    }
+
+    .cta-quote {
+      color: rgba(255, 255, 255, 0.75);
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-bottom: 40px;
+    }
+
+    .cta-quote span {
+      color: #D32035;
+    }
+
+    .trust-strip {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+      margin-top: 32px;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.35);
+    }
+
+    .trust-icon {
+      color: #D32035;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      padding: 32px 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      text-align: center;
+      background: #0d0908;
+    }
+
+    footer p {
+      color: #6b6360;
+      font-size: 0.875rem;
+    }
+
+    footer .small {
+      color: rgba(107, 99, 96, 0.5);
+      font-size: 0.75rem;
+      margin-top: 8px;
+    }
+
+    /* ── FOMO BAR ── */
+    .fomo-bar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: linear-gradient(90deg, #D32035, #ff3c00);
+      z-index: 9999;
+      padding: 10px 0;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .fomo-inner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+
+    .live-dot {
+      width: 8px;
+      height: 8px;
+      background: #fff;
+      border-radius: 50%;
+      animation: pulse 1.2s infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        opacity: 1;
+      }
+
+      50% {
+        transform: scale(1.6);
+        opacity: 0.4;
+      }
+
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    #countdown {
+      font-size: 0.95rem;
+      background: rgba(0, 0, 0, 0.25);
+      padding: 6px 14px;
+      border-radius: 4px;
+    }
+
+
+
+
+    /* CTA UPGRADE */
+    .btn {
+      animation: glowPulse 2.5s infinite ease-in-out;
+    }
+
+    @keyframes glowPulse {
+      0% {
+        box-shadow: 0 0 20px rgba(217, 79, 30, 0.3);
+      }
+
+      50% {
+        box-shadow: 0 0 45px rgba(217, 79, 30, 0.8);
+      }
+
+      100% {
+        box-shadow: 0 0 20px rgba(217, 79, 30, 0.3);
+      }
+    }
+
+    .btn:hover {
+      transform: translateY(-2px) scale(1.03);
+    }
+
+    /* LUXURY GRAIN */
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+      opacity: 0.04;
+      pointer-events: none;
+    }
+
+    /* Sticky CTA */
+    .sticky-price {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .sticky-cta {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+
+      z-index: 99999;
+
+      background: #111;
+      border-top: 1px solid rgba(255, 255, 255, .1);
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      padding: 12px 20px;
+      box-sizing: border-box;
+    }
+
+    .sticky-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .new-price {
+      font-size: 26px;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .old-price {
+      font-size: 14px;
+      text-decoration: line-through;
+      opacity: .7;
+      line-height: 1;
+    }
+
+    .sticky-timer {
+      color: #D32035;
+      font-size: 10px;
+      font-weight: 600;
+      margin-top: 3px;
+    }
+
+    .sticky-btn {
+      background: #D32035;
+      color: #fff;
+      text-decoration: none;
+
+      padding: 10px 14px;
+      border-radius: 4px;
+
+      font-weight: 700;
+      white-space: nowrap;
+      animation: glowPulse 2.5s infinite ease-in-out;
+      box-shadow: 0 0 20px rgba(211, 32, 53, 0.45);
+    }
+
+    .sticky-btn:hover {
+      filter: brightness(1.1);
+    }
+
+    .result-heading {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin: 12px 0 6px;
+      color: rgba(255, 255, 255, 0.45);
+
+      /* Fading effect */
+      background: linear-gradient(90deg,
+          transparent,
+          rgba(255, 255, 255, 0.8),
+          transparent);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      animation: fadeGlow 3s ease-in-out infinite;
+    }
+
+    @keyframes fadeGlow {
+
+      0%,
+      100% {
+        opacity: 0.4;
+      }
+
+      50% {
+        opacity: 1;
+      }
+    }
+
+    /* FAQ SECTION */
+
+.faq-section{
+padding:100px 24px;
+background:#110e0b;
+}
+
+.section-title{
+text-align:center;
+font-size:clamp(2rem,5vw,3rem);
+font-weight:900;
+color:#fff;
+margin-bottom:12px;
+}
+
+.section-subtitle{
+text-align:center;
+max-width:700px;
+margin:0 auto 60px;
+color:#6b6360;
+font-size:1rem;
+}
+
+.faq-container{
+max-width:900px;
+margin:0 auto;
+display:flex;
+flex-direction:column;
+gap:14px;
+}
+
+.faq-item{
+background:#151210;
+border:1px solid rgba(255,255,255,0.08);
+border-radius:2px;
+overflow:hidden;
+transition:all .25s ease;
+}
+
+.faq-item:hover{
+border-color:rgba(211,32,53,0.35);
+}
+
+.faq-question{
+width:100%;
+background:none;
+border:none;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:22px 24px;
+
+cursor:pointer;
+
+color:#fff;
+font-size:1rem;
+font-weight:700;
+text-align:left;
+}
+
+.faq-question span{
+color:#D32035;
+font-size:1.6rem;
+font-weight:400;
+transition:transform .25s ease;
+}
+
+.faq-answer{
+max-height:0;
+overflow:hidden;
+
+transition:
+max-height .35s ease,
+padding .35s ease;
+
+padding:0 24px;
+
+color:#9d928d;
+line-height:1.8;
+}
+
+.faq-answer p{
+padding-bottom:20px;
+}
+
+.faq-item.active .faq-answer{
+max-height:300px;
+padding:0 24px 20px;
+}
+
+.faq-item.active .faq-question span{
+transform:rotate(45deg);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.faq-section{
+padding:70px 20px;
+}
+
+.faq-question{
+font-size:.95rem;
+padding:18px;
+}
+
+.faq-answer{
+font-size:.9rem;
+}
+
+}
+/* =========================
+   DISCLAIMER SECTION
+========================= */
+
+#disclaimer{
+  padding:100px 24px;
+  background:#0d0908;
+}
+
+#disclaimer .label{
+  display:inline-block;
+  margin-bottom:12px;
+}
+
+#disclaimer .section-title{
+  font-size:clamp(2rem,5vw,3rem);
+  font-weight:900;
+  color:#fff;
+  margin-bottom:40px;
+  line-height:1.1;
+}
+
+.disclaimer-card{
+
+  background:#151210;
+
+  border:1px solid rgba(211,32,53,0.25);
+  border-left:4px solid #D32035;
+
+  padding:40px;
+
+  border-radius:2px;
+
+  transition:all .3s ease;
+}
+
+.disclaimer-card:hover{
+  border-color:rgba(211,32,53,0.45);
+}
+
+.disclaimer-icon{
+  font-size:2rem;
+  margin-bottom:20px;
+}
+
+.disclaimer-card p{
+  color:#9d928d;
+  line-height:1.9;
+  margin-bottom:18px;
+  font-size:0.95rem;
+}
+
+.disclaimer-card strong{
+  color:#fff;
+}
+
+.refund-box{
+
+  margin-top:30px;
+
+  padding:20px;
+
+  background:rgba(211,32,53,0.08);
+
+  border:1px solid rgba(211,32,53,0.2);
+
+  border-radius:2px;
+
+  color:#f5f0eb;
+
+  line-height:1.8;
+}
+
+.refund-box strong{
+  color:#D32035;
+  display:block;
+  margin-bottom:8px;
+}
+
+@media(max-width:768px){
+
+  #disclaimer{
+    padding:70px 20px;
+  }
+
+  .disclaimer-card{
+    padding:24px;
+  }
+
+  .disclaimer-icon{
+    font-size:1.5rem;
+  }
+
+  .disclaimer-card p{
+    font-size:0.9rem;
+  }
+
+}
+
+  </style>
+</head>
+
+<body>
+  <div class="sticky-cta">
+    <div class="sticky-info">
+      <div class="sticky-price">
+
+        <span class="new-price">₹1,999</span>
+        <span class="old-price">₹4,000</span>
+      </div>
+      <div class="sticky-timer">
+        ⏳ Offer Ends In: <span id="stickyCountdown">23:59:59</span>
+      </div>
+    </div>
+
+    <a href="https://tagmango.com/web/checkout/69ba9272ec06371450e9baba" class="sticky-btn">
+      START MY RESET
+    </a>
+  </div>
+  <!-- ── HERO ── -->
+  <section id="hero">
+    <div class="glow-orb glow-hero"></div>
+    <div class="hero-inner">
+      <div class="hero-badge fade-up visible">For Men Who Are Done Feeling Like Less</div>
+      <h1 class="hero-h1 fade-up visible" style="transition-delay:0.1s">
+        <span>Male Sex Drive</span> 5 Day Reset
+      </h1>
+      <p class="hero-sub fade-up visible" style="transition-delay:0.2s;margin-top:-10px;">
+        By Coach Sandeep
+      </p>
+      <p class="hero-sub fade-up visible" style="transition-delay:0.2s">
+        Restore Your Energy, Confidence, and Sex Drive at <span>Any Age.</span>
+      </p>
+      <p class="hero-desc fade-up visible" style="transition-delay:0.3s">
+        A proven 5-day protocol that reignites your testosterone, blood flow, and mental drive. So you show up fully.
+        <span>In bed. In life.</span>
+      </p>
+
+      <!-- FIXED CTA BAR -->
+
+
+
+
+    </div>
+    <div class="scroll-line"></div>
+    <div><a href="https://tagmango.com/web/checkout/69ba9272ec06371450e9baba" class="btn">&#9889; Start Your 5 Day Reset
+        Now &rarr;</a></div>
+  </section>
+
+  <!-- ── PROBLEM ── -->
+  <section id="problem">
+    <div class="container">
+      <div class="section-center fade-up">
+        <p class="hero-tagline fade-up visible" style="transition-delay:0.5s">
+          &ldquo;If you follow this protocol correctly, you should start feeling a difference within the first 2&ndash;3
+          days.&rdquo;
+        </p>
+        <!-- <span class="label">Sound familiar?</span> -->
+        <h2>If you feel like an underperformer</h2>
+      </div>
+      <div class="grid-2">
+        <div class="pain-card fade-up" data-delay="2">
+          <div class="pain-dot"></div>
+          <p>Reduced Sex Drive & Libido</p>
+        </div>
+        <div class="pain-card fade-up" data-delay="1">
+          <div class="pain-dot"></div>
+          <p>Feel 20 Years Older Than Your Age</p>
+        </div>
+
+        <div class="pain-card fade-up" data-delay="3">
+          <div class="pain-dot"></div>
+          <p>Lost Confidence in Your Body</p>
+        </div>
+        <div class="pain-card fade-up" data-delay="4">
+          <div class="pain-dot"></div>
+          <p>Don't Feel Manly, Strong, or Powerful</p>
+        </div>
+        <div class="pain-card fade-up" data-delay="5">
+          <div class="pain-dot"></div>
+          <p>Your Partner Wants More. You Just... Can't</p>
+        </div>
+      </div>
+      <div class="callout fade-up">
+        You're not alone. <strong>Modern lifestyle habits are silently killing male performance.</strong>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SOLUTION ── -->
+  <section id="solution">
+    <div class="glow-solution"></div>
+    <div class="container-sm inner">
+      <div class="fade-up">
+        <span class="label">The Solution</span>
+        <h2>The 5 Day Male Drive Reset</h2>
+        <p class="intro">
+          <strong>5 days. 5 systems.</strong>
+          No guesswork. No generic advice. Just a structured, step-by-step plan targeting the exact systems responsible
+          for male drive, energy, and performance.
+
+        </p>
+      </div>
+      <div class="systems">
+        <div class="sys-badge fade-up" data-delay="1">&#9889; Testosterone</div>
+        <div class="sys-badge fade-up" data-delay="2">&#128293; Blood Flow</div>
+        <div class="sys-badge fade-up" data-delay="3">&#129504; Dopamine</div>
+        <div class="sys-badge fade-up" data-delay="4">&#9878; Hormone Balance</div>
+        <div class="sys-badge fade-up" data-delay="5">&#128161; Nervous System</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── HOW IT WORKS ── -->
+  <section id="how">
+    <div class="container-lg">
+      <div class="section-header fade-up">
+        <span class="label">The Protocol</span>
+        <h2>How It Works</h2>
+        <p>Each day focuses on a specific performance system</p>
+      </div>
+      <div class="days">
+        <div class="day-card fade-up">
+          <div class="day-icon d1">&#x1F3CB;</div>
+          <div class="day-body">
+            <div class="day-label">Day 1</div>
+            <div class="day-title">Testosterone Activation</div>
+            <div class="day-desc">Wake up your masculine edge with targeted strength workouts, testosterone-supporting
+              nutrition, and recovery protocols designed to increase energy, confidence, strength, and natural libido.
+            </div>
+          </div>
+          <div class="day-num">01</div>
+        </div>
+        <div class="day-card fade-up" data-delay="1">
+          <div class="day-icon d2">&#x2764;</div>
+          <div class="day-body">
+            <div class="day-label">Day 2</div>
+            <div class="day-title">Blood Flow Optimization</div>
+            <div class="day-desc">Circulation-focused training, pelvic activation workouts, and nitric oxide nutrition
+              to support stronger performance, improved circulation, enhanced physical responsiveness, and greater
+              stamina.</div>
+          </div>
+          <div class="day-num">02</div>
+        </div>
+        <div class="day-card fade-up" data-delay="2">
+          <div class="day-icon d3">&#129504;</div>
+          <div class="day-body">
+            <div class="day-label">Day 3</div>
+            <div class="day-title">Dopamine Reset</div>
+            <div class="day-desc">High-intensity dopamine-reset workouts and lifestyle protocols to eliminate mental
+              fog, restore desire, sharpen motivation, and bring back the excitement you thought was gone.</div>
+          </div>
+          <div class="day-num">03</div>
+        </div>
+        <div class="day-card fade-up" data-delay="3">
+          <div class="day-icon d4">&#9878;</div>
+          <div class="day-body">
+            <div class="day-label">Day 4</div>
+            <div class="day-title">Hormone Balance</div>
+            <div class="day-desc">Stress-control, recovery practices, breathing protocols, and hormone-supportive
+              nutrition to control stress, optimize recovery, and rebuild the hormonal foundation of a high-performance
+              body.
+            </div>
+          </div>
+          <div class="day-num">04</div>
+        </div>
+        <div class="day-card fade-up" data-delay="4">
+          <div class="day-icon d5">&#x1F3C6;</div>
+          <div class="day-body">
+            <div class="day-label">Day 5</div>
+            <div class="day-title">Peak Performance</div>
+            <div class="day-desc">An all-in-one performance workout that combines testosterone activation, blood flow
+              optimization, dopamine reset, hormone balance, and nervous system activation - helping you feel younger,
+              stronger, more confident, and fully in control of your energy and drive.</div>
+          </div>
+          <div class="day-num">05</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── WHAT YOU GET ── -->
+  <section id="get">
+    <div class="container-lg">
+      <div class="two-col">
+        <div class="fade-up">
+          <span class="label">Everything Included</span>
+          <h2>What You Get Inside</h2>
+          <ul class="checklist">
+            <li><span class="check-icon">&#10003;</span> 5 structured training sessions</li>
+            <li><span class="check-icon">&#10003;</span> Step-by-step workout guidance</li>
+            <li><span class="check-icon">&#10003;</span> Daily nutrition protocols</li>
+            <li><span class="check-icon">&#10003;</span> Lifestyle optimization strategies</li>
+            <li><span class="check-icon">&#10003;</span> Daily checklists for accountability</li>
+            <li><span class="check-icon">&#10003;</span> Testosterone boosting foods list</li>
+            <li><span class="check-icon">&#10003;</span> Morning routine for high energy</li>
+            <li><span class="check-icon">&#10003;</span> Daily checklist system</li>
+          </ul>
+        </div>
+        <!-- <div class="fade-up" data-delay="2">
+          <div class="img-wrap">
+            <img src="https://images.unsplash.com/photo-1709315957145-a4bad1feef28?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800" alt="Training" />
+            <div class="img-fade"></div>
+            <div class="img-bonus">
+              <div class="b-label">BONUS INCLUDED</div>
+              <p>Testosterone foods list + Morning routine + Daily checklist system</p>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ── RESULTS ── -->
+  <section id="results">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="label">What to Expect</span>
+        <h2>If YOU Follow It. You're No Longer An Underperformer.</h2>
+      </div>
+      <div class="results-grid">
+        <div class="result-card fade-up" data-delay="1">
+          <div class="result-icon">&#9889;</div>
+          <span class="result-heading">Reduced Sex Drive & Libido</span>
+          <p>🏆 Bring Back Lost Passion & Desire</p>
+        </div>
+        <div class="result-card fade-up" data-delay="2">
+          <div class="result-icon">&#129504;</div>
+          <p>Improved mood and confidence</p>
+        </div>
+        <div class="result-card fade-up" data-delay="3">
+          <div class="result-icon">&#x1F3CB;</div>
+          <p>Better workouts and recovery</p>
+        </div>
+        <div class="result-card fade-up" data-delay="4">
+          <div class="result-icon">&#128293;</div>
+          <p>Increased natural drive</p>
+        </div>
+        <div class="result-card fade-up" data-delay="5">
+          <div class="result-icon">&#x1F6E1;</div>
+          <p>Stronger physical presence</p>
+        </div>
+        <div class="result-card fade-up" data-delay="6">
+          <div class="result-icon">&#11088;</div>
+          <p>Restored mental focus</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── NOT THIS ── -->
+  <section id="not">
+    <div class="container-sm">
+      <div class="inner">
+        <div class="fade-up">
+          <span class="label">Let's Be Clear</span>
+          <h2>This is NOT</h2>
+        </div>
+        <ul>
+          <li class="fade-up" data-delay="1"><span class="x-icon">&#10007;</span> A supplement-based shortcut</li>
+          <li class="fade-up" data-delay="2"><span class="x-icon">&#10007;</span> A fake overnight miracle</li>
+          <li class="fade-up" data-delay="3"><span class="x-icon">&#10007;</span> Generic fitness advice</li>
+          <li class="fade-up" data-delay="4"><span class="x-icon">&#10007;</span> Complicated science you can't follow
+          </li>
+        </ul>
+        <p class="verdict fade-up">
+          This is a <strong>performance-based system built on real training and physiology.</strong>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <div class="container">
+      <h2 class="section-title">
+Frequently Asked Questions
+</h2>
+
+<p class="section-subtitle">
+Everything You Need To Know Before Starting Your Reset
+</p>
+      <div class="faq-container">
+        <div class="faq-item"> <button class="faq-question"> Who Is This Program For? <span>+</span> </button>
+          <div class="faq-answer">
+            <p>This program is designed for men experiencing low energy, reduced drive, poor recovery, lack of
+              motivation, declining confidence, or feeling like they're not performing at their best.</p>
+          </div>
+        </div>
+        <div class="faq-item"> <button class="faq-question"> What Happens During The 5 Days? <span>+</span> </button>
+          <div class="faq-answer">
+            <p>Each day focuses on a key pillar of male performance including training, nutrition, sleep, recovery,
+              stress management, and lifestyle habits.</p>
+          </div>
+        </div>
+        <div class="faq-item"> <button class="faq-question"> Do I Need A Gym Membership? <span>+</span> </button>
+          <div class="faq-answer">
+            <p>No. The principles can be adapted to your current fitness level and available equipment.</p>
+          </div>
+        </div>
+        <div class="faq-item"> <button class="faq-question"> How Much Time Does It Take Each Day? <span>+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Most participants can complete the daily action steps in approximately 20–45 minutes.</p>
+          </div>
+        </div>
+        <div class="faq-item"> <button class="faq-question"> Is This A Testosterone Treatment Program? <span>+</span>
+          </button>
+          <div class="faq-answer">
+            <p>No. This is a fitness and lifestyle program designed to support healthy energy, performance, recovery,
+              and overall well-being through training, nutrition, sleep, and recovery strategies.</p>
+          </div>
+        </div>
+        <div class="faq-item"> <button class="faq-question"> Will I Have Lifetime Access? <span>+</span> </button>
+          <div class="faq-answer">
+            <p>Yes. Once enrolled, you'll have lifetime access to the program materials unless otherwise stated.</p>
+          </div>
+        </div>
+        <div class="faq-item"> <button class="faq-question"> What Is Your Refund Policy? <span>+</span> </button>
+          <div class="faq-answer">
+            <p>Due to the digital nature of this program and immediate access to all materials, all sales are final. No
+              refunds, returns, or exchanges will be provided after purchase.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> 
+
+<section id="disclaimer" class="disclaimer-section">
+
+  <div class="container-sm">
+
+    <span class="label">Important Informarion</span>
+
+    <h2 class="section-title">
+      Before You Begin
+    </h2>
+
+    <div class="disclaimer-card">
+
+      <div class="disclaimer-icon">
+        ⚠️
+      </div>
+
+      <p>
+        <strong>This Program Is Not A Medical Treatment.</strong>
+      </p>
+
+      <p>
+        The 5 Day Male Drive Reset is a fitness and lifestyle program strategically designed to support healthy energy levels, physical performance, recovery, and overall well-being through structured workouts, nutrition, lifestyle, and recovery protocols.
+      </p>
+
+      <p>
+        <strong>Individual results may vary.</strong>
+      </p>
+
+      <p>
+        This program is not intended to diagnose, treat, cure, or prevent any medical condition, hormonal disorder, sexual dysfunction, or disease.
+      </p>
+
+      <p>
+        If you have any existing medical conditions, injuries, cardiovascular concerns, or other health issues, consult a qualified healthcare professional before beginning this program.
+      </p>
+
+      <p>
+        By participating in this program, you acknowledge that you are voluntarily engaging in physical activity and accept responsibility for your own health, safety, and results.
+      </p>
+
+      <!-- <div class="refund-box">
+        <strong>Refund Policy</strong><br><br>
+        Due to the digital nature of this program and immediate access to all materials, all sales are final. No refunds, returns, cancellations, or exchanges will be provided after purchase.
+      </div> -->
+
+    </div>
+
+  </div>
+
+</section>
+
+  <!-- ── FOR WHO ── -->
+  <!-- <section id="who">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="label">Is This For You?</span>
+        <h2>This Program Is For Men Who</h2>
+      </div>
+      <div class="who-grid">
+        <div class="who-card fade-up" data-delay="1"><span class="who-icon">&#9654;</span><p>Feel low on energy or drive</p></div>
+        <div class="who-card fade-up" data-delay="2"><span class="who-icon">&#9654;</span><p>Want to improve performance naturally</p></div>
+        <div class="who-card fade-up" data-delay="3"><span class="who-icon">&#9654;</span><p>Are ready to take action</p></div>
+        <div class="who-card fade-up" data-delay="4"><span class="who-icon">&#9654;</span><p>Want real results, not hacks</p></div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- ── FINAL CTA ── -->
+  <section id="cta">
+    <div class="glow-cta"></div>
+    <div class="container-sm inner">
+      <div class="fade-up">
+        <span class="label">5 Days of Discipline</span>
+        <h2>All You Need Is <br><span>5 Days.</span></h2>
+        <p class="cta-body">
+          This is a short, intensive program. The only thing standing between
+          you and a better version of yourself is 5 days of action.
+        </p>
+        <p class="cta-quote">
+          &ldquo;Start feeling a difference within the first <span>2&ndash;3 days.</span>&rdquo;
+        </p>
+        <a href="https://tagmango.com/web/checkout/69ba9272ec06371450e9baba" class="btn">&#9889; Start Your 5 Day Reset
+          Now &rarr;</a>
+        <div class="trust-strip">
+          <div class="trust-item"><span class="trust-icon">&#x1F6E1;</span> No supplements needed</div>
+          <div class="trust-item"><span class="trust-icon">&#9889;</span> Start immediately</div>
+          <div class="trust-item"><span class="trust-icon">&#10003;</span> Proven protocols</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <p>&copy; <span id="yr"></span> 5 Day Male Drive Reset. All rights reserved.</p>
+    <p class="small">Results may vary. This program is for educational purposes only and is not a substitute for medical
+      advice.</p>
+  </footer>
+
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    // Show all fade-up elements as fallback after 300ms in case observer fails
+    var fallbackTimer = setTimeout(function () {
+      document.querySelectorAll('.fade-up').forEach(function (el) {
+        el.classList.add('visible');
+      });
+    }, 300);
+
+    // PREMIUM SCROLL REVEAL
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+
+          // slight randomness = natural feel
+          const delay = Math.random() * 120;
+
+          setTimeout(() => {
+            entry.target.classList.add("visible");
+          }, delay);
+
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.15,
+      rootMargin: "0px 0px -80px 0px"
+    });
+
+    window.addEventListener("load", () => {
+      clearTimeout(fallbackTimer);
+      document.querySelectorAll(".fade-up:not(.visible)").forEach((el) => {
+        observer.observe(el);
+      });
+    });
+
+
+    function startCountdown() {
+      const countdownElement = document.getElementById("stickyCountdown");
+
+      let timeLeft = 24 * 60 * 60; // 24 hours
+
+      setInterval(() => {
+        const hours = Math.floor(timeLeft / 3600);
+        const minutes = Math.floor((timeLeft % 3600) / 60);
+        const seconds = timeLeft % 60;
+
+        countdownElement.textContent =
+          String(hours).padStart(2, "0") + ":" +
+          String(minutes).padStart(2, "0") + ":" +
+          String(seconds).padStart(2, "0");
+
+        if (timeLeft > 0) {
+          timeLeft--;
+        }
+      }, 1000);
+    }
+
+    startCountdown();
+
+    // HERO PARALLAX
+    window.addEventListener("scroll", () => {
+      const scrolled = window.scrollY;
+      const hero = document.querySelector("#hero");
+
+      if (hero) {
+        hero.style.backgroundPositionY = `${scrolled * 0.4}px`;
+      }
+    });
+
+    document.querySelectorAll('.faq-question').forEach(question => {
+
+question.addEventListener('click', () => {
+
+const item = question.parentElement;
+
+document.querySelectorAll('.faq-item').forEach(faq => {
+  if(faq !== item){
+    faq.classList.remove('active');
+  }
+});
+
+item.classList.toggle('active');
+
+});
+
+});
+  </script>
+</body>
+
+</html>
