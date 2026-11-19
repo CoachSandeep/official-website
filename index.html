@@ -1406,6 +1406,109 @@ font-size:.9rem;
   color:#D32035;
 }
 
+
+/* Contact form modal */
+.contact-modal {
+  width: min(620px, 92vw);
+  max-height: 88vh;
+  overflow-y: auto;
+  background: #101011;
+  color: #f4f0ea;
+  border: 1px solid rgba(211,32,53,.32);
+  border-left: 4px solid #D32035;
+  border-radius: 12px;
+  padding: clamp(24px, 5vw, 42px);
+  position: relative;
+  box-sizing: border-box;
+}
+.contact-modal-eyebrow {
+  color: #D32035;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin: 0 0 12px;
+}
+.contact-modal h2 {
+  color: #f4f0ea;
+  font-size: clamp(28px, 5vw, 40px);
+  line-height: 1;
+  margin: 0 42px 12px 0;
+  letter-spacing: -1px;
+}
+.contact-modal h2 span { color: #D32035; }
+.contact-modal-intro {
+  color: #aaa7a2;
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 0 0 22px;
+}
+.contact-modal-email {
+  color: #f4f0ea;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(211,32,53,.7);
+}
+.contact-modal .contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.contact-modal .contact-form label {
+  margin-top: 7px;
+  color: #c9c4bd;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+.contact-modal .contact-form input,
+.contact-modal .contact-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  background: #171719;
+  color: #f4f0ea;
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 7px;
+  padding: 13px 14px;
+  font: inherit;
+  font-size: 14px;
+  outline: none;
+}
+.contact-modal .contact-form input:focus,
+.contact-modal .contact-form textarea:focus {
+  border-color: #D32035;
+  box-shadow: 0 0 0 2px rgba(211,32,53,.12);
+}
+.contact-modal .contact-form textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+.contact-modal .contact-form input::placeholder,
+.contact-modal .contact-form textarea::placeholder { color: #77736f; }
+.contact-modal .contact-submit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  padding: 15px 17px;
+  border: 0;
+  border-radius: 7px;
+  background: #D32035;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1.4px;
+  cursor: pointer;
+}
+.contact-modal .contact-submit:hover { background: #b91d30; }
+.contact-modal .contact-form-note {
+  color: #77736f;
+  font-size: 11px;
+  line-height: 1.6;
+  margin: 3px 0 0;
+}
+@media (max-width: 480px) {
+  .contact-modal { padding: 25px 20px; }
+}
+
 .modal-overlay{
   position:fixed;
   inset:0;
@@ -1468,6 +1571,143 @@ font-size:.9rem;
   color:#9d928d;
   line-height:1.8;
 }
+
+
+    /* ── PREMIUM FOOTER: MOBILE-FIRST ── */
+    .site-footer {
+      position: relative;
+      overflow: hidden;
+      padding: 48px 18px 22px;
+      text-align: left;
+      background:
+        radial-gradient(ellipse at 12% 0%, rgba(211,32,53,.12), transparent 38%),
+        linear-gradient(180deg, #15100f 0%, #090707 100%);
+      border-top: 1px solid rgba(211,32,53,.28);
+    }
+    .site-footer::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 8%;
+      width: 84%; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(211,32,53,.75), transparent);
+    }
+    .site-footer .footer-inner {
+      width: 100%; max-width: 1160px; margin: 0 auto;
+      position: relative; z-index: 1;
+    }
+    .site-footer .footer-main {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 28px 18px;
+      padding-bottom: 30px;
+    }
+    .footer-brand-col { grid-column: 1 / -1; }
+    .footer-wordmark {
+      display: inline-block; color: #fff; text-decoration: none;
+      font-size: 1.12rem; line-height: 1.2; font-weight: 900;
+      letter-spacing: .10em;
+    }
+    .footer-wordmark span { color: #D32035; }
+    .footer-programme-name {
+      margin-top: 10px; color: #D32035; font-size: .64rem;
+      font-weight: 800; letter-spacing: .16em;
+    }
+    .site-footer .footer-tagline {
+      max-width: 320px; margin-top: 13px; color: #a69a94;
+      font-size: .84rem; line-height: 1.7;
+    }
+    .footer-socials { display: flex; gap: 10px; margin-top: 18px; }
+    .social-icon {
+      display: inline-flex; width: 42px; height: 42px;
+      flex: 0 0 42px; align-items: center; justify-content: center;
+      border: 1px solid rgba(255,255,255,.16); border-radius: 50%;
+      color: #f5f0eb; background: rgba(255,255,255,.035);
+      transition: .22s ease;
+    }
+    .social-icon svg {
+      width: 19px; height: 19px; fill: none; stroke: currentColor;
+      stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round;
+    }
+    .social-icon svg path { fill: currentColor; stroke: none; }
+    .social-icon .social-dot { fill: currentColor; stroke: none; }
+    a.social-icon:hover {
+      color: #fff; background: #D32035; border-color: #D32035;
+      transform: translateY(-2px); box-shadow: 0 7px 22px rgba(211,32,53,.25);
+    }
+    .social-icon-muted { color: #766d69; cursor: default; }
+    .footer-social-note { margin-top: 9px; color: #716763; font-size: .72rem; }
+    .site-footer .footer-column { min-width: 0; }
+    .site-footer .footer-column h3 {
+      margin: 2px 0 13px; color: #f5f0eb; font-size: .66rem;
+      font-weight: 800; letter-spacing: .14em; text-transform: uppercase;
+    }
+    .site-footer .footer-column a {
+      display: block; width: fit-content; max-width: 100%;
+      margin: 11px 0; color: #9d928d; text-decoration: none;
+      font-size: .80rem; line-height: 1.55; overflow-wrap: anywhere;
+      transition: color .2s ease, transform .2s ease;
+    }
+    .site-footer .footer-column a:hover { color: #fff; transform: translateX(2px); }
+    .footer-assurance {
+      display: flex; align-items: flex-start; justify-content: flex-start;
+      gap: 10px; padding: 14px 13px;
+      border: 1px solid rgba(211,32,53,.18);
+      background: rgba(211,32,53,.055); color: #b5a9a3;
+      text-align: left; font-size: .75rem; line-height: 1.55;
+    }
+    .footer-assurance p { margin: 0; }
+    .assurance-mark { flex: 0 0 auto; color: #D32035; font-size: 1rem; }
+    .footer-bottom {
+      display: flex; flex-direction: column; align-items: flex-start;
+      gap: 8px; margin-top: 20px; padding-top: 17px;
+      border-top: 1px solid rgba(255,255,255,.08);
+    }
+    .site-footer .footer-bottom p {
+      margin: 0; color: #716763; font-size: .70rem; line-height: 1.6;
+    }
+
+    /* Small phones */
+    @media (max-width: 359px) {
+      .site-footer { padding-left: 16px; padding-right: 16px; }
+      .site-footer .footer-main { grid-template-columns: 1fr; gap: 22px; }
+      .footer-brand-col { grid-column: auto; }
+      .site-footer .footer-column h3 { margin-bottom: 9px; }
+      .site-footer .footer-column a { margin: 9px 0; }
+    }
+
+    /* Larger phones and tablets */
+    @media (min-width: 600px) {
+      .site-footer { padding: 60px 28px 24px; }
+      .site-footer .footer-main {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 34px 28px; padding-bottom: 38px;
+      }
+      .footer-brand-col { grid-column: 1 / -1; }
+      .site-footer .footer-column h3 { font-size: .70rem; margin-bottom: 16px; }
+      .site-footer .footer-column a { font-size: .84rem; margin: 12px 0; }
+      .footer-assurance { justify-content: center; text-align: center; align-items: center; }
+      .footer-bottom { flex-direction: row; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    }
+
+    /* Desktop */
+    @media (min-width: 960px) {
+      .site-footer { padding: 76px 28px 26px; }
+      .site-footer .footer-main {
+        grid-template-columns: 1.65fr 1fr 1.15fr 1fr;
+        gap: 42px; padding-bottom: 48px;
+      }
+      .footer-brand-col { grid-column: auto; }
+      .footer-wordmark { font-size: 1.22rem; letter-spacing: .11em; }
+      .footer-programme-name { font-size: .69rem; letter-spacing: .19em; }
+      .site-footer .footer-tagline { max-width: 290px; font-size: .9rem; line-height: 1.8; margin-top: 16px; }
+      .footer-socials { margin-top: 23px; }
+      .footer-social-note { font-size: .75rem; margin-top: 10px; }
+      .site-footer .footer-column h3 { font-size: .73rem; letter-spacing: .18em; margin: 3px 0 20px; }
+      .site-footer .footer-column a { font-size: .87rem; margin: 13px 0; }
+      .footer-assurance { padding: 17px 20px; font-size: .83rem; }
+      .footer-bottom { margin-top: 25px; padding-top: 22px; }
+      .site-footer .footer-bottom p { font-size: .75rem; }
+    }
 
   </style>
 </head>
@@ -2026,19 +2266,101 @@ Everything You Need To Know Before Starting Your Reset
     </div>
   </section>
 
-  <!-- ── FOOTER ── -->
-  <footer>
-    <!-- <p>&copy; <span id="yr"></span> 5 Day Male Drive Reset. All rights reserved.</p>
-    <p class="small">Results may vary. This program is for educational purposes only and is not a substitute for medical
-      advice.</p> -->
-      <div class="legal-links">
-  <a href="#" id="openTerms">Terms & Conditions</a>
-  <span>|</span>
-  <a href="#" id="openRefund">Refund Policy</a>
-  <span>|</span>
-  <a href="#" id="openPrivacy">Privacy Policy</a>
-</div>
+  <!-- ── PREMIUM TRUST FOOTER ── -->
+
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-main">
+        <div class="footer-brand-col">
+          <a class="footer-wordmark" href="#hero">COACH SANDEEP<span>.</span></a>
+          <div class="footer-programme-name">5 DAY MALE DRIVE RESET</div>
+          <p class="footer-tagline">
+            A structured fitness and lifestyle programme built around training,
+            nutrition and everyday habits.
+          </p>
+          <div class="footer-socials" aria-label="Social media">
+            <a class="social-icon" href="https://www.instagram.com/coach_sandeep/"
+               target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                <circle cx="12" cy="12" r="4"></circle>
+                <circle class="social-dot" cx="17.5" cy="6.5" r="1"></circle>
+              </svg>
+            </a>
+            <span class="social-icon social-icon-muted" role="img"
+                  aria-label="Facebook icon; profile link to be added" title="Facebook link to be added">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M14 8h3V4h-3c-3 0-5 2-5 5v2H6v4h3v5h4v-5h3l1-4h-4V9c0-.7.3-1 1-1z"></path>
+              </svg>
+            </span>
+          </div>
+          <p class="footer-social-note">Follow for training, nutrition &amp; updates</p>
+        </div>
+
+        <div class="footer-column">
+          <h3>Explore</h3>
+          <a href="#solution">About the Reset</a>
+          <a href="#how">How It Works</a>
+          <a href="#get">What’s Included</a>
+          <a href="#coach">Meet Coach Sandeep</a>
+        </div>
+
+        <div class="footer-column">
+          <h3>Help &amp; Support</h3>
+          <a href="#" id="openContact">Contact Us</a>
+          <a href="#" id="openContactSupport">Programme &amp; Payment Help</a>
+          <a href="#disclaimer">Health &amp; Safety Information</a>
+        </div>
+
+        <div class="footer-column">
+          <h3>Important</h3>
+          <a href="#" id="openTerms">Terms &amp; Conditions</a>
+          <a href="#" id="openRefund">Refund &amp; Cancellation</a>
+          <a href="#" id="openPrivacy">Privacy Policy</a>
+        </div>
+      </div>
+
+      <div class="footer-assurance">
+        <span class="assurance-mark">✦</span>
+        <p>Clear programme information. Transparent policies. Support when you need it.</p>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span id="yr"></span> Coach Sandeep. All rights reserved.</p>
+        <p class="footer-disclaimer">For educational purposes only. Not a substitute for personalised medical advice.</p>
+      </div>
+    </div>
   </footer>
+
+
+<div class="modal-overlay" id="contactModal">
+  <div class="contact-modal" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
+    <button class="close-modal" type="button" aria-label="Close contact form">&times;</button>
+    <p class="contact-modal-eyebrow">NEED A HAND?</p>
+    <h2 id="contactModalTitle">LET'S <span>CONNECT.</span></h2>
+    <p class="contact-modal-intro">
+      Have a question about the 5 Day Male Drive Reset, your access, or payment?
+      Send a message and we'll get back to you. You can also email
+      <a class="contact-modal-email" href="mailto:teamcoachsandeep@gmail.com">teamcoachsandeep@gmail.com</a>.
+    </p>
+
+    <form class="contact-form" action="https://formspree.io/f/xbgoybgj" method="POST">
+      <input type="hidden" name="_subject" value="New website enquiry — 5 Day Male Drive Reset">
+      <label for="contact-name">YOUR NAME</label>
+      <input id="contact-name" type="text" name="name" placeholder="Enter your name" autocomplete="name" required>
+
+      <label for="contact-email">EMAIL ADDRESS</label>
+      <input id="contact-email" type="email" name="email" placeholder="Enter your email" autocomplete="email" required>
+
+      <label for="contact-message">MESSAGE</label>
+      <textarea id="contact-message" name="message" rows="4" placeholder="How can we help you?" required></textarea>
+
+      <button type="submit" class="contact-submit">SEND MESSAGE <span aria-hidden="true">↗</span></button>
+      <p class="contact-form-note">Please don't include sensitive medical or payment information.</p>
+    </form>
+  </div>
+</div>
 
 <div class="modal-overlay" id="termsModal">
 
@@ -2122,7 +2444,7 @@ Everything You Need To Know Before Starting Your Reset
       </p>
 
       <p>
-        support@yourdomain.com
+        teamcoachsandeep@gmail.com
       </p>
 
     </div>
@@ -2188,7 +2510,7 @@ Everything You Need To Know Before Starting Your Reset
       <h3>Contact</h3>
 
       <p>
-        support@yourdomain.com
+        teamcoachsandeep@gmail.com
       </p>
 
     </div>
@@ -2382,6 +2704,8 @@ function setupModal(buttonId, modalId){
 setupModal("openTerms","termsModal");
 setupModal("openRefund","refundModal");
 setupModal("openPrivacy","privacyModal");
+setupModal("openContact","contactModal");
+setupModal("openContactSupport","contactModal");
   </script>
 </body>
 
