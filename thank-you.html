@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101011">
+<title>You're In | 5-Day Male Drive Reset</title>
+<style>
+:root {
+  --bg:#101011; --red:#d32035; --white:#f4f0ea;
+  --muted:#b9b5b0; --line:rgba(255,255,255,.13);
+}
+* { box-sizing:border-box; }
+html,body { margin:0; min-height:100%; }
+body {
+  color:var(--white);
+  background:
+    radial-gradient(ellipse at 82% 22%, rgba(116,12,25,.16), transparent 38%),
+    radial-gradient(ellipse at 10% 78%, rgba(116,12,25,.10), transparent 36%),
+    var(--bg);
+  font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+.page {
+  width:min(100%,560px);
+  margin:0 auto;
+  padding:28px 20px 26px;
+  text-align:center;
+  overflow:hidden;
+}
+.brand { font-weight:800; text-transform:uppercase; line-height:1.08; }
+.brand-top { display:block; font-size:clamp(23px,6vw,30px); letter-spacing:.08em; }
+.brand-main {
+  display:inline-block; margin-top:6px; padding:5px 13px 7px;
+  color:var(--red); border-left:2px solid var(--red);
+  border-right:2px solid var(--red); font-size:clamp(22px,6vw,30px);
+  font-style:italic; letter-spacing:.015em;
+}
+.byline { margin-top:9px; color:var(--muted); font-size:11px; font-weight:650; letter-spacing:.28em; }
+.portrait-wrap {
+  width:min(100%,430px); height:clamp(280px,78vw,390px);
+  margin:18px auto 0; overflow:hidden;
+  -webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 82%,transparent 100%);
+  mask-image:linear-gradient(to bottom,#000 0%,#000 82%,transparent 100%);
+}
+.portrait { display:block; width:100%; height:100%; object-fit:contain; object-position:center top; }
+.confirmation { margin-top:0; }
+.check {
+  width:54px; height:54px; margin:0 auto 10px; display:grid; place-items:center;
+  border:3px solid var(--red); border-radius:50%; color:var(--red);
+  font-size:32px; line-height:1; box-shadow:0 0 20px rgba(211,32,53,.14);
+}
+h1 { margin:0; font-size:clamp(40px,10vw,54px); line-height:1; font-weight:850; letter-spacing:-.045em; }
+.subline { margin:12px 0 0; color:var(--muted); font-size:clamp(15px,4vw,18px); line-height:1.45; }
+.steps {
+  display:grid; grid-template-columns:repeat(3,1fr); gap:0;
+  margin:26px 0 22px; padding:20px 7px;
+  background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.018));
+  border:1px solid var(--line); border-radius:21px;
+}
+.step { min-width:0; padding:2px 5px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; }
+.step + .step { border-left:1px solid var(--line); }
+.step-icon { width:35px; height:35px; color:var(--red); }
+.step-label { font-size:clamp(11px,3.1vw,14px); font-weight:650; line-height:1.2; }
+.cta {
+  display:flex; width:100%; min-height:60px; align-items:center; justify-content:center; gap:12px;
+  padding:16px 18px; border-radius:999px; background:var(--red); color:#fff;
+  text-decoration:none; font-size:clamp(14px,3.8vw,18px); font-weight:800;
+  box-shadow:0 9px 25px rgba(211,32,53,.16); transition:transform .18s ease,background .18s ease;
+}
+.cta:hover { background:#e1263d; transform:translateY(-1px); }
+.cta:focus-visible { outline:3px solid white; outline-offset:4px; }
+.footer { margin:29px 0 0; color:var(--muted); font-size:10px; letter-spacing:.34em; }
+@media(min-width:700px) {
+  body { display:grid; place-items:center; padding:28px 0; }
+  .page { width:min(100% - 40px,540px); padding:34px 30px 30px; border:1px solid rgba(255,255,255,.06); border-radius:28px; background:rgba(16,16,17,.72); box-shadow:0 22px 90px rgba(0,0,0,.35); }
+  .portrait-wrap { height:360px; }
+}
+@media(max-width:360px) {
+  .page { padding-left:14px; padding-right:14px; }
+  .steps { padding-left:3px; padding-right:3px; }
+  .step-label { font-size:10px; }
+}
+</style>
+</head>
+<body>
+<main class="page">
+  <header class="brand" aria-label="5-Day Male Drive Reset by Coach Sandeep">
+    <span class="brand-top">5-Day</span>
+    <span class="brand-main">Male Drive Reset</span>
+    <div class="byline">BY COACH SANDEEP</div>
+  </header>
+
+  <div class="portrait-wrap">
+    <img class="portrait" src="images/coach-sandeep.png">
+  </div>
+
+  <section class="confirmation" aria-labelledby="welcome">
+    <div class="check" aria-hidden="true">✓</div>
+    <h1 id="welcome">You're In.</h1>
+    <p class="subline">Your 5-Day Reset journey starts now.</p>
+  </section>
+
+  <section class="steps" aria-label="Your next steps">
+    <div class="step">
+      <svg class="step-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <rect x="4" y="9" width="40" height="30" rx="3" stroke="currentColor" stroke-width="3"/>
+        <path d="m6 12 18 14 18-14" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="step-label">Check Email</span>
+    </div>
+    <div class="step">
+      <svg class="step-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <circle cx="24" cy="24" r="19" stroke="currentColor" stroke-width="3"/>
+        <path d="m20 15 14 9-14 9V15Z" fill="currentColor"/>
+      </svg>
+      <span class="step-label">Start Day 1</span>
+    </div>
+    <div class="step">
+      <svg class="step-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <rect x="6" y="9" width="36" height="34" rx="4" stroke="currentColor" stroke-width="3"/>
+        <path d="M15 5v9M33 5v9M7 19h34M17 29l5 5 10-11" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="step-label">Stay Consistent</span>
+    </div>
+  </section>
+
+  <!-- Replace this placeholder with your actual TagMango programme access URL. -->
+  <a class="cta" href="YOUR_TAGMANGO_PROGRAMME_LINK">
+    ACCESS YOUR PROGRAMME <span aria-hidden="true">→</span>
+  </a>
+
+  <footer class="footer">BY COACH SANDEEP</footer>
+</main>
+</body>
+</html>
